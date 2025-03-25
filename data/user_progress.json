@@ -1,6 +1,11 @@
 {
     "user1": {
-        "words": [],
-        "scores": []
+        "words": [
+            "happy",
+            "prostitution",
+            "sad"
+        ],
+        "scores": [],
+        "bookmarks": []
     }
 }

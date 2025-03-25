@@ -2,9 +2,10 @@ import json
 import os
 
 def export_progress(user_id):
-    progress = os.path.join(os.path.dirname(__file__), '../../data/user_progress.json')
-    with open(progress, 'r') as f:
+    progress_file = os.path.join(os.path.dirname(__file__), '../../data/user_progress.json')
+    with open(progress_file, 'r') as f:
         data = json.load(f)
-    with open(f"{user_id}_progress.json", 'w') as f:
+    export_file = f"{user_id}_progress.json"
+    with open(export_file, 'w') as f:
         json.dump(data.get(user_id, {}), f, indent=4)
-    return f"{user_id}_progress.json"
+    return export_file

@@ -1,5 +1,3 @@
-from dictionary_api import get_word_details
-
 def get_category_words(level):
     categories = {
         "easy": ["happy", "sad", "big"],

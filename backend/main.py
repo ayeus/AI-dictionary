@@ -6,11 +6,16 @@ from categories import get_category_words
 from quiz_generator import generate_quiz, generate_passage, generate_puzzle
 from utils.export_data import export_progress
 
-app = Flask(__name__, static_folder="../frontend")
+app = Flask(__name__, static_folder="../frontend", static_url_path='')
 
 @app.route('/')
 def serve_frontend():
     return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    print(f"Requesting: {path}")  # Debug log
+    return send_from_directory(app.static_folder, path)
 
 @app.route('/search_word', methods=['POST'])
 def search_word():

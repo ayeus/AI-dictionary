@@ -1,3 +1,3 @@
 def generate_audio(word):
-    # Placeholder: In a real app, use a text-to-speech library like gTTS
-    return f"Audio for {word} would be generated here."
+    # Placeholder: Use a TTS library like gTTS in production
+    return f"audio/{word}.mp3"  # Pretend audio file exists

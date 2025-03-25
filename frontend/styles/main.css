@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #f3f4f6;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --background: #ffffff;
+  --card-bg: #f9fafb;
+  --border: #e5e7eb;
+  --border-radius: 12px;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --animation-duration: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.5;
+  padding: 2rem;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 25% 10%, rgba(99, 102, 241, 0.05) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(99, 102, 241, 0.05) 0%, transparent 25%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--primary), #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  border-radius: 3px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  position: relative;
+}
+
+.tabs::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--animation-duration) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tabs button:hover {
+  color: var(--primary);
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.tabs button:active {
+  transform: translateY(2px);
+}
+
+.tabs button.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.tabs button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.search-container {
+  display: flex;
+  margin: 2rem 0;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#word-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color var(--animation-duration) ease, box-shadow var(--animation-duration) ease;
+  outline: none;
+}
+
+#word-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+#word-input::placeholder {
+  color: #9ca3af;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) ease, transform var(--animation-duration) ease;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2), 0 2px 4px -1px rgba(99, 102, 241, 0.1);
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px -1px rgba(99, 102, 241, 0.2), 0 1px 2px -1px rgba(99, 102, 241, 0.1);
+}
+
+#content {
+  margin-top: 2rem;
+  min-height: 300px;
+  position: relative;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+/* Apply animation to elements */
+.animated {
+  animation: fadeIn var(--animation-duration) ease forwards;
+}
+
+.pulse {
+  animation: pulse 2s infinite;}

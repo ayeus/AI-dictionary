@@ -1,65 +1,119 @@
 {
     "happy": {
         "word": "happy",
-        "meaning": "Feeling or showing pleasure or contentment",
-        "synonyms": ["joyful", "cheerful"],
-        "antonyms": ["sad", "miserable"],
+        "meaning": "Feeling or showing pleasure",
+        "synonyms": [
+            {"word": "joyful", "example": "She was joyful at the party."},
+            {"word": "cheerful", "example": "His cheerful smile brightened the room."}
+        ],
+        "antonyms": [
+            {"word": "sad", "example": "She felt sad after the news."},
+            {"word": "miserable", "example": "He was miserable in the rain."}
+        ],
         "usage": "She was happy to see her friends."
     },
     "sad": {
         "word": "sad",
-        "meaning": "Feeling or showing sorrow",
-        "synonyms": ["melancholy", "sorrowful"],
-        "antonyms": ["happy", "joyful"],
-        "usage": "He felt sad after the news."
+        "meaning": "Feeling sorrow",
+        "synonyms": [
+            {"word": "melancholy", "example": "The melody had a melancholy tone."},
+            {"word": "sorrowful", "example": "Her sorrowful eyes told a story."}
+        ],
+        "antonyms": [
+            {"word": "happy", "example": "He was happy with the gift."},
+            {"word": "joyful", "example": "The kids were joyful at the park."}
+        ],
+        "usage": "He felt sad after the loss."
     },
     "big": {
         "word": "big",
-        "meaning": "Of considerable size or extent",
-        "synonyms": ["large", "enormous"],
-        "antonyms": ["small", "tiny"],
+        "meaning": "Large in size",
+        "synonyms": [
+            {"word": "large", "example": "The large tree shaded the yard."},
+            {"word": "enormous", "example": "The enormous building towered over us."}
+        ],
+        "antonyms": [
+            {"word": "small", "example": "The small kitten was adorable."},
+            {"word": "tiny", "example": "A tiny bug crawled on the leaf."}
+        ],
         "usage": "The house was big enough for all."
     },
     "joyful": {
         "word": "joyful",
-        "meaning": "Feeling or expressing great happiness",
-        "synonyms": ["happy", "delighted"],
-        "antonyms": ["sad", "depressed"],
+        "meaning": "Expressing great happiness",
+        "synonyms": [
+            {"word": "happy", "example": "She was happy with her new toy."},
+            {"word": "delighted", "example": "He was delighted by the surprise."}
+        ],
+        "antonyms": [
+            {"word": "sad", "example": "She was sad about leaving."},
+            {"word": "depressed", "example": "He felt depressed after the call."}
+        ],
         "usage": "The celebration was a joyful event."
     },
     "melancholy": {
         "word": "melancholy",
-        "meaning": "A feeling of pensive sadness",
-        "synonyms": ["sad", "gloomy"],
-        "antonyms": ["happy", "cheerful"],
+        "meaning": "Pensive sadness",
+        "synonyms": [
+            {"word": "sad", "example": "He was sad about the farewell."},
+            {"word": "gloomy", "example": "The gloomy day matched her mood."}
+        ],
+        "antonyms": [
+            {"word": "happy", "example": "She was happy to be home."},
+            {"word": "cheerful", "example": "His cheerful laugh echoed."}
+        ],
         "usage": "The rainy day brought a melancholy mood."
     },
     "enormous": {
         "word": "enormous",
-        "meaning": "Very large in size or amount",
-        "synonyms": ["huge", "gigantic"],
-        "antonyms": ["tiny", "small"],
+        "meaning": "Very large",
+        "synonyms": [
+            {"word": "huge", "example": "The huge ship sailed smoothly."},
+            {"word": "gigantic", "example": "A gigantic statue stood tall."}
+        ],
+        "antonyms": [
+            {"word": "tiny", "example": "The tiny flower bloomed."},
+            {"word": "small", "example": "A small bird chirped nearby."}
+        ],
         "usage": "The elephant was enormous."
     },
     "euphoria": {
         "word": "euphoria",
-        "meaning": "A feeling of intense happiness",
-        "synonyms": ["elation", "ecstasy"],
-        "antonyms": ["misery", "despair"],
-        "usage": "Winning the game caused euphoria."
+        "meaning": "Intense happiness",
+        "synonyms": [
+            {"word": "elation", "example": "Her elation was contagious."},
+            {"word": "ecstasy", "example": "He felt ecstasy at the win."}
+        ],
+        "antonyms": [
+            {"word": "misery", "example": "She lived in misery after the loss."},
+            {"word": "despair", "example": "Despair overwhelmed him."}
+        ],
+        "usage": "Winning caused euphoria."
     },
     "lugubrious": {
         "word": "lugubrious",
-        "meaning": "Looking or sounding sad and dismal",
-        "synonyms": ["mournful", "gloomy"],
-        "antonyms": ["cheerful", "happy"],
-        "usage": "His lugubrious tone matched the occasion."
+        "meaning": "Sad and dismal",
+        "synonyms": [
+            {"word": "mournful", "example": "The mournful song played softly."},
+            {"word": "gloomy", "example": "His gloomy face showed his mood."}
+        ],
+        "antonyms": [
+            {"word": "cheerful", "example": "She was cheerful all day."},
+            {"word": "happy", "example": "He was happy with the result."}
+        ],
+        "usage": "His lugubrious tone matched the mood."
     },
     "gargantuan": {
         "word": "gargantuan",
         "meaning": "Enormously large",
-        "synonyms": ["gigantic", "colossal"],
-        "antonyms": ["tiny", "minute"],
+        "synonyms": [
+            {"word": "gigantic", "example": "The gigantic wall was impressive."},
+            {"word": "colossal", "example": "A colossal effort was needed."}
+        ],
+        "antonyms": [
+            {"word": "tiny", "example": "The tiny seed grew slowly."},
+            {"word": "minute", "example": "A minute detail was overlooked."}
+        ],
         "usage": "The project required gargantuan effort."
     }
 }

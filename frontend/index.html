@@ -3,32 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Word Dictionary</title>
+    <title>Eloquent - AI Word Dictionary</title>
+    <meta name="description" content="Expand your vocabulary with our AI-powered dictionary">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/result_box.css">
     <link rel="stylesheet" href="styles/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>AI Word Dictionary</h1>
+        <h1>Eloquent Vocabulary Hub</h1>
         <div class="tabs">
-            <button onclick="showTab('daily')">Daily Word</button>
-            <button onclick="showTab('categories')">Categories</button>
-            <button onclick="showTab('quiz')">Quiz/Puzzle</button>
-            <button onclick="showTab('recap')">Recap</button>
-            <button onclick="showTab('history')">History</button>
-            <button onclick="showTab('profile')">Profile</button>
+            <button id="tab-daily" class="active" onclick="showTab('daily')"><i class="fas fa-calendar-day"></i> Daily Word</button>
+            <button id="tab-categories" onclick="showTab('categories')"><i class="fas fa-th-large"></i> Categories</button>
+            <button id="tab-quiz" onclick="showTab('quiz')"><i class="fas fa-puzzle-piece"></i> Quiz/Puzzle</button>
+            <button id="tab-recap" onclick="showTab('recap')"><i class="fas fa-chart-line"></i> Recap</button>
+            <button id="tab-history" onclick="showTab('history')"><i class="fas fa-history"></i> History</button>
+            <button id="tab-profile" onclick="showTab('profile')"><i class="fas fa-user"></i> Profile</button>
         </div>
-        <input id="word-input" type="text" placeholder="Enter a word">
-        <button onclick="searchWord()">Search</button>
-        <div id="content"></div>
+
+        <div class="search-container">
+            <input id="word-input" type="text" placeholder="Enter a word to look up...">
+            <button onclick="searchWord()"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <div id="content" class="tab-content">
+            <!-- Content will be loaded dynamically -->
+        </div>
     </div>
-    <script src="scripts/home.js"></script>
-    <script src="scripts/categories.js"></script>
-    <script src="scripts/word_details.js"></script>
-    <script src="scripts/quiz_puzzle.js"></script>
-    <script src="scripts/recap.js"></script>
-    <script src="scripts/history.js"></script>
-    <script src="scripts/profile.js"></script>
+
+    <!-- Mobile floating action button -->
+    <div class="fab">
+        <i class="fas fa-search"></i>
+    </div>
+    
+    <script src="/scripts/home.js"></script>
+    <script src="/scripts/categories.js"></script>
+    <script src="/scripts/word_detail.js"></script>
+    <script src="/scripts/quiz_puzzle.js"></script>
+    <script src="/scripts/recap.js"></script>
+    <script src="/scripts/history.js"></script>
+    <script src="/scripts/profile.js"></script>
 </body>
 </html>
