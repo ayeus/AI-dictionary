@@ -1,0 +1,65 @@
+{
+    "happy": {
+        "word": "happy",
+        "meaning": "Feeling or showing pleasure or contentment",
+        "synonyms": ["joyful", "cheerful"],
+        "antonyms": ["sad", "miserable"],
+        "usage": "She was happy to see her friends."
+    },
+    "sad": {
+        "word": "sad",
+        "meaning": "Feeling or showing sorrow",
+        "synonyms": ["melancholy", "sorrowful"],
+        "antonyms": ["happy", "joyful"],
+        "usage": "He felt sad after the news."
+    },
+    "big": {
+        "word": "big",
+        "meaning": "Of considerable size or extent",
+        "synonyms": ["large", "enormous"],
+        "antonyms": ["small", "tiny"],
+        "usage": "The house was big enough for all."
+    },
+    "joyful": {
+        "word": "joyful",
+        "meaning": "Feeling or expressing great happiness",
+        "synonyms": ["happy", "delighted"],
+        "antonyms": ["sad", "depressed"],
+        "usage": "The celebration was a joyful event."
+    },
+    "melancholy": {
+        "word": "melancholy",
+        "meaning": "A feeling of pensive sadness",
+        "synonyms": ["sad", "gloomy"],
+        "antonyms": ["happy", "cheerful"],
+        "usage": "The rainy day brought a melancholy mood."
+    },
+    "enormous": {
+        "word": "enormous",
+        "meaning": "Very large in size or amount",
+        "synonyms": ["huge", "gigantic"],
+        "antonyms": ["tiny", "small"],
+        "usage": "The elephant was enormous."
+    },
+    "euphoria": {
+        "word": "euphoria",
+        "meaning": "A feeling of intense happiness",
+        "synonyms": ["elation", "ecstasy"],
+        "antonyms": ["misery", "despair"],
+        "usage": "Winning the game caused euphoria."
+    },
+    "lugubrious": {
+        "word": "lugubrious",
+        "meaning": "Looking or sounding sad and dismal",
+        "synonyms": ["mournful", "gloomy"],
+        "antonyms": ["cheerful", "happy"],
+        "usage": "His lugubrious tone matched the occasion."
+    },
+    "gargantuan": {
+        "word": "gargantuan",
+        "meaning": "Enormously large",
+        "synonyms": ["gigantic", "colossal"],
+        "antonyms": ["tiny", "minute"],
+        "usage": "The project required gargantuan effort."
+    }
+}

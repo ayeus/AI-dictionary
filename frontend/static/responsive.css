@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+    #word-input {
+        width: 100%;
+    }
+    .tabs button {
+        display: block;
+        width: 100%;
+    }
+}
