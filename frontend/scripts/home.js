@@ -14,11 +14,11 @@ function showTab(tab) {
     const content = document.getElementById('content');
     content.innerHTML = '';
     if (tab === 'daily') fetchDailyWord();
-    if (tab === 'categories') showCategories();
-    if (tab === 'quiz') showQuizOptions();
-    if (tab === 'recap') showRecap();
-    if (tab === 'history') showHistory();
-    if (tab === 'profile') showProfile();
+    else if (tab === 'categories') showCategories();
+    else if (tab === 'quiz') showQuizOptions();
+    else if (tab === 'recap') showRecap();
+    else if (tab === 'history') showHistory();
+    else if (tab === 'profile') showProfile();
 }
 
 async function fetchDailyWord() {

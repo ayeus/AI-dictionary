@@ -7,7 +7,6 @@ def save_progress(user_id, word):
     history_file = os.path.join(os.path.dirname(__file__), '../data/history.json')
     recap_file = os.path.join(os.path.dirname(__file__), '../data/weekly_recap.json')
     
-    # Update progress
     with open(progress_file, 'r+') as f:
         data = json.load(f)
         if user_id not in data:
@@ -17,7 +16,6 @@ def save_progress(user_id, word):
         f.seek(0)
         json.dump(data, f, indent=4)
     
-    # Update history
     with open(history_file, 'r+') as f:
         history = json.load(f)
         if user_id not in history:
@@ -26,7 +24,6 @@ def save_progress(user_id, word):
         f.seek(0)
         json.dump(history, f, indent=4)
 
-    # Update weekly recap
     week = datetime.now().strftime("week_%W_%Y")
     with open(recap_file, 'r+') as f:
         recap = json.load(f)

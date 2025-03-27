@@ -14,7 +14,6 @@ def serve_frontend():
 
 @app.route('/<path:path>')
 def serve_static(path):
-    print(f"Requesting: {path}")  # Debug log
     return send_from_directory(app.static_folder, path)
 
 @app.route('/search_word', methods=['POST'])

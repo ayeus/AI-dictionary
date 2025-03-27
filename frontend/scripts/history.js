@@ -5,7 +5,7 @@ async function showHistory() {
     content.innerHTML = `
         <h3>History</h3>
         <p>Words: ${history.words.map(w => `${w.word} (${w.timestamp})`).join(', ')}</p>
-        <p>Quizzes: ${history.quizzes.join(', ')}</p>
-        <p>Activities: ${history.activities.join(', ')}</p>
+        <p>Quizzes: ${history.quizzes.join(', ') || 'None'}</p>
+        <p>Activities: ${history.activities.join(', ') || 'None'}</p>
     `;
 }

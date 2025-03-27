@@ -2,16 +2,44 @@
     "user1": {
         "words": [
             {
-                "word": "happy",
+                "word": "",
                 "timestamp": "2025-03-25"
             },
             {
-                "word": "prostitution",
+                "word": "inteligent",
                 "timestamp": "2025-03-25"
+            },
+            {
+                "word": "inteligent",
+                "timestamp": "2025-03-25"
+            },
+            {
+                "word": "inteligent",
+                "timestamp": "2025-03-25"
+            },
+            {
+                "word": "inteligent",
+                "timestamp": "2025-03-25"
+            },
+            {
+                "word": "inteligent",
+                "timestamp": "2025-03-26"
             },
             {
                 "word": "sad",
-                "timestamp": "2025-03-25"
+                "timestamp": "2025-03-26"
+            },
+            {
+                "word": "good",
+                "timestamp": "2025-03-26"
+            },
+            {
+                "word": "good",
+                "timestamp": "2025-03-26"
+            },
+            {
+                "word": "good",
+                "timestamp": "2025-03-26"
             }
         ],
         "quizzes": [],

@@ -17,8 +17,7 @@ function showWordDetails(data) {
 }
 
 function playAudio(word) {
-    // Placeholder: In production, fetch real audio
-    alert(`Playing audio for ${word}`);
+    alert(`Playing audio for ${word}`); // Placeholder
 }
 
 function learnMore(word) {
@@ -26,10 +25,11 @@ function learnMore(word) {
 }
 
 async function bookmark(word) {
-    await fetch('/bookmark', {
+    const response = await fetch('/bookmark', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ word })
     });
-    alert(`${word} bookmarked!`);
+    const result = await response.json();
+    alert(result.message);
 }
