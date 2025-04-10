@@ -6,8 +6,16 @@ function showWordDetails(data) {
         content.innerHTML = `
             <h3>${data.word}</h3>
             <p><strong>Meaning:</strong> ${data.meaning}</p>
-            <p><strong>Synonyms:</strong> ${data.synonyms.map(s => `${s.word} (${s.example})`).join(', ')}</p>
-            <p><strong>Antonyms:</strong> ${data.antonyms.map(a => `${a.word} (${a.example})`).join(', ')}</p>
+            <p><strong>Synonyms:</strong> ${
+                data.synonyms.length > 0 
+                ? data.synonyms.map(s => `${s.word} (${s.example})`).join(', ') 
+                : "None available"
+            }</p>
+            <p><strong>Antonyms:</strong> ${
+                data.antonyms.length > 0 
+                ? data.antonyms.map(a => `${a.word} (${a.example})`).join(', ') 
+                : "None available"
+            }</p>
             <p><strong>Usage:</strong> ${data.usage}</p>
             <button onclick="playAudio('${data.word}')">Play Audio</button>
             <button onclick="learnMore('${data.word}')">Learn More</button>

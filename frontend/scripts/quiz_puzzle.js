@@ -18,15 +18,22 @@ async function startQuiz() {
         const content = document.getElementById('content');
         console.log('Quiz data:', quiz); // Debug: Log the response
 
-        // Check if quiz is an array (successful response) or an object (error)
         if (Array.isArray(quiz)) {
-            content.innerHTML = '<h3>Quiz</h3>' + quiz.map((q, i) => `
-                <div>
-                    <p>${q.question}</p>
-                    ${q.options.map(opt => `<label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label><br>`).join('')}
-                    <p><small>Correct Answer: ${q.answer}</small></p>
-                </div>
-            `).join('<hr>');
+            content.innerHTML = `
+                <h3>Quiz</h3>
+                <form id="quizForm">
+                    ${quiz.map((q, i) => `
+                        <div>
+                            <p>${q.question}</p>
+                            ${q.options.map(opt => `
+                                <label><input type="radio" name="q${i}" value="${opt}"> ${opt}</label><br>
+                            `).join('')}
+                            <p class="answer" id="answer${i}" style="display: none;"><small>Correct Answer: ${q.answer}</small></p>
+                        </div>
+                    `).join('<hr>')}
+                    <button type="button" onclick="submitQuiz(${JSON.stringify(quiz)})">Submit</button>
+                </form>
+            `;
         } else if (quiz.error) {
             content.innerHTML = `<h3>Quiz</h3><p>Error: ${quiz.error}</p>`;
         } else {
@@ -36,6 +43,21 @@ async function startQuiz() {
         console.error('Error fetching quiz:', error);
         document.getElementById('content').innerHTML = `<h3>Quiz</h3><p>Failed to load quiz: ${error.message}</p>`;
     }
+}
+
+function submitQuiz(quizData) {
+    // Show all answers
+    quizData.forEach((_, i) => {
+        document.getElementById(`answer${i}`).style.display = 'block';
+    });
+    // Disable radio buttons to prevent further changes
+    const form = document.getElementById('quizForm');
+    const inputs = form.querySelectorAll('input[type="radio"]');
+    inputs.forEach(input => input.disabled = true);
+    // Optionally, remove the submit button or change its text
+    const submitButton = form.querySelector('button');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Submitted';
 }
 
 async function startPassage() {
